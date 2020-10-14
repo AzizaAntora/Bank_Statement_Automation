@@ -38,9 +38,11 @@ public class StatementFunctionalityTest {
 
 	    WebElement nextToLink = driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/span"));
 	    nextToLink.click();
+	    
+	    driver.findElement(By.xpath("/html/body/div/form/button")).click();
 		
 		try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -64,13 +66,70 @@ public class StatementFunctionalityTest {
 	    driver.findElement(By.xpath("/html/body/div/form/button")).click();
 	    
 	    try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 	    
 	    driver.findElement(By.xpath("/html/body/div/nav/a/span")).click();
-	        	   
+	        
+	    driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+	    
+	    WebElement dateFromBox1 = driver.findElement(By.name("from_date"));
+	    dateFromBox1.click();
+		
+	    dateFromBox1.sendKeys("2020-04-01 00:00:00");
+	    
+	    driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+	    
+	    WebElement dateToBox1 = driver.findElement(By.name("to_date"));
+	    dateToBox1.click();
+		
+	    dateToBox1.sendKeys("2020-06-30 00:00:00");
+
+	    driver.findElement(By.xpath("/html/body/div/form/button")).click();
+	    
+	    try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+	    driver.findElement(By.xpath("/html/body/div/nav/a/span")).click();
+	    
+	    driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+	    
+	    WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
+	    dateFromBox2.click();
+		
+	    dateFromBox2.sendKeys("2020-05-01 00:00:00");
+	    
+	    driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+	    
+	    WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+	    dateToBox2.click();
+		
+	    dateToBox2.sendKeys("2020-10-13 00:00:00");
+
+	    driver.findElement(By.xpath("/html/body/div/form/button")).click();
+	    
+	    try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+	    driver.findElement(By.xpath("/html/body/div/nav/a/span")).click();
+	    
+	    driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("abcd");
+	    driver.findElement(By.xpath("/html/body/div/form/button")).click();
+	    
+	    try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+	    
+	    driver.close();
+	    driver.quit();
     }
 
 }
