@@ -4,5 +4,41 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="E:/SQA Project/selenium-java-3.141.59/client-combined-3.141.59.jar"/>
 	<classpathentry kind="lib" path="E:/SQA Project/selenium-java-3.141.59/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/groovy-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/groovy-json-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/groovy-xml-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/jakarta.activation-api-1.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/jakarta.xml.bind-api-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/jaxb-impl-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2-deps/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="E:/SQA Project/REST ASSURED/rest-assured-4.3.2-dist/rest-assured-4.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/org.json.jar/org.json.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/testng-6.0.jar/testng-6.0.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/groovy-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/groovy-json-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/groovy-xml-3.0.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/jakarta.activation-api-1.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/jakarta.xml.bind-api-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/jaxb-impl-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/json-path-4.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/rest-assured-4.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/rest-assured-common-4.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="lib" path="E:/SQA Project/jar_files/xml-path-4.3.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
