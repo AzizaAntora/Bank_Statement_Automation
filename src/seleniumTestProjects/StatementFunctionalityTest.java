@@ -13,22 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class StatementFunctionalityTest {
 
 	public static void main(String[] args) {
-	
-		
-//		BankTests bankTest = new BankTests();
-		
-//		bankTest.testTransactionWithoutDateRange();
-//		
-//		bankTest = new BankTests();
-//		
-//		bankTest.testTodaysTransaction();
-		
+
 		Statement statementTest = new Statement();
 		statementTest.postDetails();
-		
-		
-    }
+
+	}
 
 }
-
-

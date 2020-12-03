@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +11,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 
 public class BankTests {
 
@@ -78,7 +76,7 @@ public class BankTests {
 
 		WebElement balanceText = driver.findElement(By.xpath("/html/body/div/div[1]"));
 		String balanceBefore = balanceText.getText();
-		
+
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
 		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
@@ -97,13 +95,13 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("1430.00 EUR");
 		assertTrue(verifyBalanceAfter);
 
 	}
 
 	@Test
-	public void balanceBeforeTestForCurrentDate() {
+	public void balanceBeforeTestFromCurrentDateToCurrentDate() {
 
 		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
 
@@ -126,12 +124,12 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("10.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
 	@Test
-	public void balanceAfterTestForCurrentDate() {
+	public void balanceAfterTestFromCurrentDateToCurrentDate() {
 
 		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
 
@@ -212,7 +210,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("1430.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -240,7 +238,7 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("10.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
@@ -268,14 +266,14 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("1400.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
 	@Test
-	public void balanceBeofreTestFromMidOfYearToCurrentDate() {
+	public void balanceBeforeTestFromMidOfYearToCurrentDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101103");
 
 		WebElement dateFromBox1 = driver.findElement(By.name("from_date"));
 		dateFromBox1.click();
@@ -297,14 +295,14 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("10.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("1030.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
 	@Test
 	public void balanceAfterTestFromMidOfYearToCurrentDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101103");
 
 		WebElement dateFromBox1 = driver.findElement(By.name("from_date"));
 		dateFromBox1.click();
@@ -326,14 +324,14 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("180.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
 	@Test
-	public void balanceBeofreTestFromMidOfYearToMidOfYear() {
+	public void balanceBeforeTestFromMidOfYearToMidOfYear() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
@@ -354,14 +352,14 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("10.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("150.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
 	@Test
 	public void balanceAfterTestFromMidOfYearToMidOfYear() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101101");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
@@ -382,7 +380,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("80.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -410,7 +408,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("4600.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -440,7 +438,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -492,7 +490,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -526,7 +524,7 @@ public class BankTests {
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
 
-		dateFromBox2.sendKeys("2020-04-01 00:00:00");
+		dateFromBox2.sendKeys("2020-03-01 00:00:00");
 		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
@@ -536,7 +534,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -576,7 +574,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -628,14 +626,66 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("");
+		assertTrue(verifyBalanceAfter);
+	}
+
+	@Test
+	public void balanceBeforeTestWithValidAccountIDAndWithInvalidDateRange() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+
+		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
+		dateFromBox2.click();
+
+		dateFromBox2.sendKeys("2025-10-30 00:00:00");
+		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+
+		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+		dateToBox2.click();
+
+		dateToBox2.sendKeys("2029-06-01 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText = driver.findElement(By.xpath("/html/body/div/div[1]"));
+		String balanceBefore = balanceText.getText();
+
+		balanceBefore = checkBalanceBefore(balanceBefore);
+
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
+		assertTrue(verifyBalanceBefore);
+	}
+
+	@Test
+	public void balanceAfterTestWithValidAccountIDAndWithInvalidDateRange() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+
+		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
+		dateFromBox2.click();
+
+		dateFromBox2.sendKeys("2025-10-30 00:00:00");
+		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+
+		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+		dateToBox2.click();
+
+		dateToBox2.sendKeys("2029-06-01 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText1 = driver.findElement(By.xpath("/html/body/div/div[2]/div"));
+		String balanceAfter = balanceText1.getText();
+
+		balanceAfter = checkBalanceAfter(balanceAfter);
+
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
 	@Test
 	public void balanceBeforeTestWithValidAccountIDAndWithFromDateSmallerAndToDateGreater() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
@@ -661,7 +711,7 @@ public class BankTests {
 	@Test
 	public void balanceAfterTestWithValidAccountIDAndWithFromDateSmallerAndToDateGreater() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
@@ -678,33 +728,21 @@ public class BankTests {
 		WebElement balanceText1 = driver.findElement(By.xpath("/html/body/div/div[2]/div"));
 		String balanceAfter = balanceText1.getText();
 
-		try {
-			String[] str = balanceAfter.split("Balance after");
-			if (str.length > 1) {
-				balanceAfter = balanceAfter.split("Balance after")[1];
-				balanceAfter = balanceAfter.split("« Previous")[0];
-			} else {
-				balanceAfter = "";
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		System.out.println("Balance After: " + balanceAfter);
-
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
 	@Test
 	public void balanceBeforeTestWithValidAccountIDAndOnlyValidFromDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
 
-		dateFromBox2.sendKeys("2020-03-01 00:00:00");
+		dateFromBox2.sendKeys("2020-07-01 00:00:00");
 		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
@@ -714,19 +752,19 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("220.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
 	@Test
 	public void balanceAfterTestWithValidAccountIDAndOnlyValidFromDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
 
-		dateFromBox2.sendKeys("2020-04-01 00:00:00");
+		dateFromBox2.sendKeys("2020-07-01 00:00:00");
 		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
@@ -736,19 +774,61 @@ public class BankTests {
 
 		System.out.println("Balance After: " + balanceAfter.split("Balance after")[1]);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("100.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
 	@Test
 	public void balanceBeforeTestWithValidAccountIDAndOnlyValidToDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
 		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
 		dateToBox2.click();
 
-		dateToBox2.sendKeys("2020-10-14 00:00:00");
+		dateToBox2.sendKeys("2020-06-30 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText = driver.findElement(By.xpath("/html/body/div/div[1]"));
+		String balanceBefore = balanceText.getText();
+
+		balanceBefore = checkBalanceBefore(balanceBefore);
+
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("100.00 EUR");
+		assertTrue(verifyBalanceBefore);
+	}
+
+	@Test
+	public void balanceAfterTestWithValidAccountIDAndOnlyValidToDate() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
+
+		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+		dateToBox2.click();
+
+		dateToBox2.sendKeys("2020-06-30 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText1 = driver.findElement(By.xpath("/html/body/div/div[2]/div"));
+		String balanceAfter = balanceText1.getText();
+
+		balanceAfter = checkBalanceAfter(balanceAfter);
+
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("220.00 EUR");
+		assertTrue(verifyBalanceAfter);
+	}
+
+	@Test
+	public void balanceBeforeTestWithValidAccountIDAndInvalidFromDate() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
+
+		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
+		dateFromBox2.click();
+
+		dateFromBox2.sendKeys("2025-06-01 00:00:00");
+		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
 		WebElement balanceText = driver.findElement(By.xpath("/html/body/div/div[1]"));
@@ -761,14 +841,16 @@ public class BankTests {
 	}
 
 	@Test
-	public void balanceAfterTestWithValidAccountIDAndOnlyValidToDate() {
+	public void balanceAfterTestWithValidAccountIDAndInvalidFromDate() {
 
-		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101102");
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
 
-		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
-		dateToBox2.click();
+		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
+		dateFromBox2.click();
 
-		dateToBox2.sendKeys("2020-10-14 00:00:00");
+		dateFromBox2.sendKeys("2025-06-01 00:00:00");
+		driver.findElement(By.xpath("//*[@id=\"to_datepicker\"]/input")).click();
+
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
 		WebElement balanceText1 = driver.findElement(By.xpath("/html/body/div/div[2]/div"));
@@ -776,7 +858,47 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
+		assertTrue(verifyBalanceAfter);
+	}
+
+	@Test
+	public void balanceBeforeTestWithValidAccountIDAndInvalidToDate() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
+
+		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+		dateToBox2.click();
+
+		dateToBox2.sendKeys("1990-06-30 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText = driver.findElement(By.xpath("/html/body/div/div[1]"));
+		String balanceBefore = balanceText.getText();
+
+		balanceBefore = checkBalanceBefore(balanceBefore);
+
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
+		assertTrue(verifyBalanceBefore);
+	}
+
+	@Test
+	public void balanceAfterTestWithValidAccountIDAndInvalidToDate() {
+
+		driver.findElement(By.xpath("//*[@id=\"search_account_id\"]")).sendKeys("101104");
+
+		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
+		dateToBox2.click();
+
+		dateToBox2.sendKeys("1990-06-30 00:00:00");
+		driver.findElement(By.xpath("/html/body/div/form/button")).click();
+
+		WebElement balanceText1 = driver.findElement(By.xpath("/html/body/div/div[2]/div"));
+		String balanceAfter = balanceText1.getText();
+
+		balanceAfter = checkBalanceAfter(balanceAfter);
+
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("0.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -786,7 +908,7 @@ public class BankTests {
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
 
-		dateFromBox2.sendKeys("2020-10-12 00:00:00");
+		dateFromBox2.sendKeys("2020-07-01 00:00:00");
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
@@ -795,7 +917,7 @@ public class BankTests {
 
 		balanceBefore = checkBalanceBefore(balanceBefore);
 
-		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("0.00 EUR");
+		Boolean verifyBalanceBefore = balanceBefore.equalsIgnoreCase("4880.00 EUR");
 		assertTrue(verifyBalanceBefore);
 	}
 
@@ -805,7 +927,7 @@ public class BankTests {
 		WebElement dateFromBox2 = driver.findElement(By.name("from_date"));
 		dateFromBox2.click();
 
-		dateFromBox2.sendKeys("2020-10-12 00:00:00");
+		dateFromBox2.sendKeys("2020-07-01 00:00:00");
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
@@ -814,7 +936,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("690.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
@@ -824,7 +946,7 @@ public class BankTests {
 		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
 		dateToBox2.click();
 
-		dateToBox2.sendKeys("2020-10-14 00:00:00");
+		dateToBox2.sendKeys("2020-01-15 00:00:00");
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
@@ -843,7 +965,7 @@ public class BankTests {
 		WebElement dateToBox2 = driver.findElement(By.name("to_date"));
 		dateToBox2.click();
 
-		dateToBox2.sendKeys("2020-10-14 00:00:00");
+		dateToBox2.sendKeys("2020-01-15 00:00:00");
 
 		driver.findElement(By.xpath("/html/body/div/form/button")).click();
 
@@ -852,7 +974,7 @@ public class BankTests {
 
 		balanceAfter = checkBalanceAfter(balanceAfter);
 
-		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("30.00 EUR");
+		Boolean verifyBalanceAfter = balanceAfter.equalsIgnoreCase("590.00 EUR");
 		assertTrue(verifyBalanceAfter);
 	}
 
